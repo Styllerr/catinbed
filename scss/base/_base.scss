@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    color: #000000;
+    background-color: rgba($color: rgb(230, 230, 230), $alpha: 0.5);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}

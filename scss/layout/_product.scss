@@ -1,0 +1,45 @@
+.product {
+    max-width: 1440px;
+    margin: 0 auto;
+    &__title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 53px;
+        color: #000000;
+    }
+}
+.product__list {
+}
+.product__list-item {
+}
+.product__description {
+}
+.description {
+    &__icon-wrapper {
+    }
+    &__text {
+    }
+    &__icon-price {
+        background: url(../image/svg/label-price.svg) no-repeat;
+    }
+    &__icon-guarantee {
+        background: url(../../image/svg/label-guarantee.svg) no-repeat;
+    }
+    &__icon-delivery {
+        background: url(../../image/svg/label-delivery.svg) no-repeat;
+    }
+    &__icon-present {
+        background: url(../../image/svg/label-present.svg) no-repeat;
+    }
+    &__icon-cover {
+        background: url(../../image/svg/label-cover.svg) no-repeat;
+    }
+
+}
+.label-icon {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+}

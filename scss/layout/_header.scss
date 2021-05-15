@@ -1,0 +1,52 @@
+.site-btn {
+    max-width: 329px;
+    width: 100%;
+    padding: 2rem 0;
+    color: white;
+    background: #ffa901;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
+    font-weight: bold;
+    font-size: 1.5625rem;
+    line-height: 1.8125rem;
+}
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo-wrapper {
+        max-width: 158px;
+    }
+    &__logo {
+        width: 100%;
+        height: auto;
+    }
+    &__contacts {
+        display: grid;
+        gap: 0 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        align-items: center;
+    }
+    &__callback-btn {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        padding: 1rem 0;
+    }
+}
+.contacts {
+    &__number {
+        font-weight: bold;
+        font-size: 1.5625rem;
+        line-height: 1.8125rem;
+        margin: 0;
+    }
+    &__time {
+        font-weight: 300;
+        font-size: 1.0625rem;
+        line-height: 1.25rem;
+        margin: 0;
+    }
+}
