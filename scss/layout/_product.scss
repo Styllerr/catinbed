@@ -1,45 +1,75 @@
+.product-container {
+    background: url(../image/png/backgrount-main.png);
+}
+.mattress {
+    background-image: url(/image/png/background-mattress.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
 .product {
     max-width: 1440px;
     margin: 0 auto;
+    &__wrapper {
+        max-width: 610px;
+        margin-bottom: 3.125rem;
+    }
     &__title {
-        font-family: "Roboto";
-        font-style: normal;
         font-weight: bold;
         font-size: 45px;
         line-height: 53px;
         color: #000000;
+        text-align: left;
+        margin: 0;
     }
-}
-.product__list {
-}
-.product__list-item {
-}
-.product__description {
+    &__list {
+        margin: 2.1875rem 0 5rem;
+        text-align: left;
+        &-item {
+            font-size: 20px;
+            line-height: 154.4%;
+        }
+    }
+    &__description {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        gap: 3.125rem 3.5rem;
+    }
+    &__select-btn {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 .description {
     &__icon-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
     &__text {
+        flex-basis: 76%;
+        margin: 0;
     }
     &__icon-price {
         background: url(../image/svg/label-price.svg) no-repeat;
     }
     &__icon-guarantee {
-        background: url(../../image/svg/label-guarantee.svg) no-repeat;
+        background: url(../image/svg/label-guarantee.svg) no-repeat;
     }
     &__icon-delivery {
-        background: url(../../image/svg/label-delivery.svg) no-repeat;
+        background: url(../image/svg/label-delivery.svg) no-repeat;
     }
     &__icon-present {
-        background: url(../../image/svg/label-present.svg) no-repeat;
+        background: url(../image/svg/label-present.svg) no-repeat;
     }
     &__icon-cover {
-        background: url(../../image/svg/label-cover.svg) no-repeat;
+        background: url(../image/svg/label-cover.svg) no-repeat;
     }
-
 }
 .label-icon {
-    width: 70px;
-    height: 70px;
+    flex-basis: 23%;
+    height: 75px;
     background-size: contain;
+    background-position-y: center;
 }

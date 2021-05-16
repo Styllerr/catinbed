@@ -411,14 +411,16 @@ body {
 .site-btn {
   max-width: 329px;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1.79rem 0;
   color: white;
   background: #ffa901;
+  border: 0;
   border-radius: 1rem;
   filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
   font-weight: bold;
   font-size: 1.5625rem;
   line-height: 1.8125rem;
+  cursor: pointer;
 }
 
 .header-wrapper {
@@ -479,18 +481,67 @@ body {
   padding: 150px 1rem 0;
 }
 
+.product-container {
+  background: url(../image/png/backgrount-main.png);
+}
+
+.mattress {
+  background-image: url(/image/png/background-mattress.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
 .product {
   max-width: 1440px;
   margin: 0 auto;
 }
 
+.product__wrapper {
+  max-width: 610px;
+  margin-bottom: 3.125rem;
+}
+
 .product__title {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: bold;
   font-size: 45px;
   line-height: 53px;
   color: #000000;
+  text-align: left;
+  margin: 0;
+}
+
+.product__list {
+  margin: 2.1875rem 0 5rem;
+  text-align: left;
+}
+
+.product__list-item {
+  font-size: 20px;
+  line-height: 154.4%;
+}
+
+.product__description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, max-content);
+  gap: 3.125rem 3.5rem;
+}
+
+.product__select-btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.description__icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.description__text {
+  flex-basis: 76%;
+  margin: 0;
 }
 
 .description__icon-price {
@@ -498,25 +549,26 @@ body {
 }
 
 .description__icon-guarantee {
-  background: url(../../image/svg/label-guarantee.svg) no-repeat;
+  background: url(../image/svg/label-guarantee.svg) no-repeat;
 }
 
 .description__icon-delivery {
-  background: url(../../image/svg/label-delivery.svg) no-repeat;
+  background: url(../image/svg/label-delivery.svg) no-repeat;
 }
 
 .description__icon-present {
-  background: url(../../image/svg/label-present.svg) no-repeat;
+  background: url(../image/svg/label-present.svg) no-repeat;
 }
 
 .description__icon-cover {
-  background: url(../../image/svg/label-cover.svg) no-repeat;
+  background: url(../image/svg/label-cover.svg) no-repeat;
 }
 
 .label-icon {
-  width: 70px;
-  height: 70px;
+  flex-basis: 23%;
+  height: 75px;
   background-size: contain;
+  background-position-y: center;
 }
 
 /* User styles */
