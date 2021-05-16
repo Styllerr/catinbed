@@ -10,9 +10,14 @@
     font-size: 1.5625rem;
     line-height: 1.8125rem;
 }
+.header-wrapper {
+    position: absolute;
+    width: 100%;
+}
 .header {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,5 +53,12 @@
         font-size: 1.0625rem;
         line-height: 1.25rem;
         margin: 0;
+        justify-self: end;
     }
+}
+.site-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 150px 1rem 0;
+
 }
