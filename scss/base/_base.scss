@@ -4,7 +4,7 @@ html {
     font-style: normal;
     font-weight: 500;
     color: #000000;
-    background-color: rgba($color: rgb(230, 230, 230), $alpha: 0.5);
+    background-color: rgba($color: rgb(173, 173, 173), $alpha: 0.8);
 }
 *,
 *::before,
@@ -17,7 +17,9 @@ a:active {
     text-decoration: none;
     color: inherit;
 }
-body {
+main {
     max-width: 1920px;
     margin: 0 auto;
+    padding: 0 1rem 3.125rem;
+    background: white url(../image/png/backgrount-main.png);
 }

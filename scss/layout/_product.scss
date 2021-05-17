@@ -1,16 +1,23 @@
-.product-container {
-    background: url(../image/png/backgrount-main.png);
-}
-.mattress {
-    background-image: url(/image/png/background-mattress.png);
-    background-repeat: no-repeat;
-    background-position: top right;
+.mattress,
+.pillow {
+    &__img-wrapper {
+        flex-basis: 58%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
 }
 .product {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 1550px;
+    margin: 0 4.5833% 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     &__wrapper {
         max-width: 610px;
+        width: 45%;
+        padding-top: 9.1rem;
         margin-bottom: 3.125rem;
     }
     &__title {
@@ -39,6 +46,9 @@
         display: block;
         text-align: center;
         margin: 0 auto;
+    }
+    &__btn-wrapper {
+        width: 100%;
     }
 }
 .description {

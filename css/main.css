@@ -387,7 +387,7 @@ html {
   font-style: normal;
   font-weight: 500;
   color: #000000;
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(173, 173, 173, 0.8);
 }
 
 *,
@@ -403,9 +403,11 @@ a:active {
   color: inherit;
 }
 
-body {
+main {
   max-width: 1920px;
   margin: 0 auto;
+  padding: 0 1rem 3.125rem;
+  background: white url(../image/png/backgrount-main.png);
 }
 
 .site-btn {
@@ -475,29 +477,29 @@ body {
   justify-self: end;
 }
 
-.site-main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 150px 1rem 0;
+.mattress__img-wrapper,
+.pillow__img-wrapper {
+  flex-basis: 58%;
 }
 
-.product-container {
-  background: url(../image/png/backgrount-main.png);
-}
-
-.mattress {
-  background-image: url(/image/png/background-mattress.png);
-  background-repeat: no-repeat;
-  background-position: top right;
+.mattress__img,
+.pillow__img {
+  width: 100%;
+  height: auto;
 }
 
 .product {
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 1550px;
+  margin: 0 4.5833% 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .product__wrapper {
   max-width: 610px;
+  width: 45%;
+  padding-top: 9.1rem;
   margin-bottom: 3.125rem;
 }
 
@@ -531,6 +533,10 @@ body {
   display: block;
   text-align: center;
   margin: 0 auto;
+}
+
+.product__btn-wrapper {
+  width: 100%;
 }
 
 .description__icon-wrapper {
@@ -571,6 +577,18 @@ body {
   background-position-y: center;
 }
 
+.carousel-mattress {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 5.625rem;
+  background-color: white;
+}
+
+.carousel-mattress__title {
+  margin: 0 0 3.125rem;
+  text-align: center;
+}
+
 /* User styles */
 @media screen and (min-width: 911px) {
   .ant-carousel {
@@ -591,7 +609,7 @@ body {
 }
 
 .ant-carousel {
-  margin: 50px auto auto;
+  margin: 0 auto auto;
   padding-top: 10px;
   border: 1px solid #ccd;
   background-color: white;
