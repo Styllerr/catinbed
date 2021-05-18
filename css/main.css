@@ -578,7 +578,9 @@ main {
 }
 
 .carousel-mattress,
-.carousel-pillow {
+.carousel-pillow,
+.carousel-feedback,
+.site-footer {
   max-width: 1920px;
   margin: 0 auto;
   padding: 5.625rem 1rem 0;
@@ -586,7 +588,8 @@ main {
 }
 
 .carousel-mattress__title,
-.carousel-pillow__title {
+.carousel-pillow__title,
+.carousel-feedback__title {
   margin: 0 0 3.125rem;
   text-align: center;
 }
@@ -638,6 +641,10 @@ main {
   padding: 1.5rem 0.5rem;
 }
 
+.pillow-card > .card__title {
+  height: 52px;
+}
+
 /* User styles */
 @media screen and (min-width: 1600px) {
   .ant-carousel {
@@ -665,6 +672,10 @@ main {
   width: 343px;
   text-align: center;
   margin-left: 23px;
+}
+
+.comment-carousel-element {
+  width: 467px;
 }
 
 /* General styles */
@@ -742,5 +753,36 @@ span.ant-dot {
   background-color: #bbb;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.comment__wrapper {
+  padding: 2rem 2.5rem;
+}
+
+.comment__name {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+p.comment__text {
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  text-align: left;
+}
+
+.star-wrapper {
+  text-align: right;
+}
+
+.carousel-feedback {
+  padding-bottom: 7.81rem;
+}
+
+.footer__title {
+  text-align: center;
+  margin-bottom: 3.25rem;
+  font-size: 1.875rem;
 }
 /*# sourceMappingURL=main.css.map */
