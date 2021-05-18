@@ -577,47 +577,76 @@ main {
   background-position-y: center;
 }
 
-.carousel-mattress {
+.carousel-mattress,
+.carousel-pillow {
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 5.625rem;
+  padding: 5.625rem 1rem 0;
   background-color: white;
 }
 
-.carousel-mattress__title {
+.carousel-mattress__title,
+.carousel-pillow__title {
   margin: 0 0 3.125rem;
   text-align: center;
 }
 
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3.125rem 0 2.375rem;
+  background: #ffffff;
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.14);
+  border-radius: 0.75rem;
+}
+
+.card__wrapper > p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.card__wrapper > p > span {
+  color: #426AF9;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  color: #000000;
+}
+
 /* User styles */
-@media screen and (min-width: 911px) {
+@media screen and (min-width: 1600px) {
   .ant-carousel {
-    max-width: 810px;
+    max-width: 1487px;
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 910px) {
+@media screen and (min-width: 768px) and (max-width: 1600px) {
   .ant-carousel {
-    max-width: 540px;
+    max-width: 690px;
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .ant-carousel {
-    max-width: 270px;
+    max-width: 343px;
   }
 }
 
 .ant-carousel {
-  margin: 0 auto auto;
-  padding-top: 10px;
-  border: 1px solid #ccd;
-  background-color: white;
+  margin: 0 auto;
 }
 
 .ant-carousel-element {
-  width: 270px;
+  width: 343px;
   text-align: center;
+  margin-left: 23px;
 }
 
 /* General styles */
@@ -628,6 +657,8 @@ main {
 
 .ant-carousel-hider {
   overflow: hidden;
+  border-radius: 2rem;
+  padding: 1.3rem 0;
 }
 
 .ant-carousel-list {
@@ -659,14 +690,14 @@ div.ant-carousel-arrow-left {
   left: -40px;
   top: 40%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+  background: url(../image/png/ant-arrow-left.png) no-repeat;
 }
 
 div.ant-carousel-arrow-right {
   right: -40px;
   top: 40%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+  background: url(../image/png/ant-arrow-right.png) no-repeat;
 }
 
 div.ant-carousel-arrow-left:hover {
@@ -678,12 +709,9 @@ div.ant-carousel-arrow-right:hover {
 }
 
 div.ant-carousel-dots {
+  margin: 3.125rem 0 0;
   width: 100%;
   height: auto;
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  z-index: 30;
   text-align: center;
 }
 

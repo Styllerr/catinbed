@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script/create-card.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <title>Cat bed</title>
 </head>
@@ -58,7 +59,7 @@
             </div>
         </section>
         <div class="product__btn-wrapper">
-            <a href="#" class="product__select-btn site-btn">Выбрать топпер</a>
+            <a href="#matt" class="product__select-btn site-btn">Выбрать топпер</a>
         </div>
         <section class="pillow product ">
             <div class="product__wrapper">
@@ -95,61 +96,42 @@
             </div>
         </section>
         <div class="product__btn-wrapper">
-            <a href="#" class="product__select-btn site-btn">Выбрать подушку</a>
+            <a href="#pill" class="product__select-btn site-btn">Выбрать подушку</a>
         </div>
     </main>
-    <section class="carousel-mattress">
+    <section id="matt" class="carousel-mattress">
         <h2 class="carousel-mattress__title">Все модели топперов</h2>
-        <div class="ant-carousel">
+        <div id="mattress" class="ant-carousel">
             <div class="ant-carousel-hider">
                 <ul class="ant-carousel-list">
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img0.jpg" alt="0">
-                        <p>Описание 0</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img1.jpg" alt="1">
-                        <p>Описание 1</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img2.jpg" alt="2">
-                        <p>Описание 2</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img3.jpg" alt="3">
-                        <p>Описание 3</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img4.jpg" alt="4">
-                        <p>Описание 4</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img5.jpg" alt="5">
-                        <p>Описание 5</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img6.jpg" alt="6">
-                        <p>Описание 6</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img7.jpg" alt="7">
-                        <p>Описание 7</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img8.jpg" alt="8">
-                        <p>Описание 8</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="http://pvbk.spb.ru/inc/carousel/imgs/img9.jpg" alt="9">
-                        <p>Описание 9</p>
-                    </li>
                 </ul>
             </div>
+            <div class="ant-carousel-dots"></div>
             <div class="ant-carousel-arrow-left"></div>
             <div class="ant-carousel-arrow-right"></div>
-            <div class="ant-carousel-dots"></div>
         </div>
     </section>
-    <section class="carousel-pillow">
-
+    <section id="pill" class="carousel-pillow">
+        <h2 class="carousel-pillow__title">Все модели подушек</h2>
+        <div id="pillow" class="ant-carousel">
+            <div class="ant-carousel-hider">
+                <ul class="ant-carousel-list">
+                    
+                </ul>
+            </div>
+            <div class="ant-carousel-dots"></div>
+            <div class="ant-carousel-arrow-left"></div>
+            <div class="ant-carousel-arrow-right"></div>
+        </div>
     </section>
     <section class="carousel-feedback">
 
     </section>
     <footer class="site-footer">
-        
+
     </footer>
-    <script src="./script/carousel.js"></script>
+    <script src="./script/carousel-mattress.js"></script>
+    <script src="./script/carousel-pillow.js"></script>
 </body>
 
 </html>
