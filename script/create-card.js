@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let mattressList = [];
     let pillowList = [];
+    let commentList = [];
     fetch('./data/mattress.json')
         .then((response) => {
             return response.json();
