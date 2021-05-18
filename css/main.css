@@ -609,8 +609,15 @@ main {
   line-height: 29px;
 }
 
+.card__wrapper > p.card__size {
+  font-size: 1.1875rem;
+  line-height: 124.2%;
+  color: #6f6f6f;
+  margin-top: 2.1875rem;
+}
+
 .card__wrapper > p > span {
-  color: #426AF9;
+  color: #426af9;
 }
 
 .card__title {
@@ -618,6 +625,16 @@ main {
   font-size: 1.375rem;
   line-height: 1.625rem;
   color: #000000;
+}
+
+.card__name {
+  font-weight: bold;
+  font-size: 1.5625rem;
+  line-height: 1.8125rem;
+}
+
+.pillow-card {
+  padding: 1.5rem 0.5rem;
 }
 
 /* User styles */

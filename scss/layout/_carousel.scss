@@ -25,8 +25,14 @@
             font-weight: bold;
             font-size: 25px;
             line-height: 29px;
+            &.card__size {
+                font-size: 1.1875rem;
+                line-height: 124.2%;
+                color: #6f6f6f;
+                margin-top: 2.1875rem;
+            }
             & > span {
-                color: #426AF9;
+                color: #426af9;
             }
         }
     }
@@ -36,6 +42,14 @@
         line-height: 1.625rem;
         color: #000000;
     }
+    &__name {
+        font-weight: bold;
+        font-size: 1.5625rem;
+        line-height: 1.8125rem;
+    }
+}
+.pillow-card {
+    padding: 1.5rem 0.5rem;
 }
 /* User styles */
 @media screen and (min-width: 1600px) {
