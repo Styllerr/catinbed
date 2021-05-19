@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (product === "comment") {
             commentList.forEach(item => {
                 let tempNode = document.createElement('li');
-                tempNode.className = 'ant-carousel-element';
+                tempNode.className = 'ant-carousel-element comment-carousel-element';
 
                 let content = '<div class="card__wrapper comment__wrapper"><div class="star-wrapper">';
                 for (let i = 0; i < item.stars; i++) {
