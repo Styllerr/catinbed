@@ -141,7 +141,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57915.09058134811!2d36.22646229849492!3d50.09546821483582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a651e8fc047f%3A0xbb3583ca04851d54!2z0YPQuy4g0JPQsNCz0LDRgNC40L3QsCwgMjAsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1621352694474!5m2!1sru!2sua"
             width="1880" height="568" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </footer>
-    <div id="order__modal" class="modal__conteiner">
+    <div id="order__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
             <form action="#" class="order__form">
                 <div id="cross" class="form__cross"></div>
@@ -171,24 +171,31 @@
                     <p class="order__text">Ортопедическая пена OrtoSoft способствует правильному распределению давления
                         на различные участки твоего тела, снимает нагрузку с сосудов и улучшает кровообращение во время
                         сна. Упругость и прочность кокосовой койры увеличивается в 1,5 раза, благодаря пропитке
-                        натуральным латексом.
-                        Дополнительная система вентиляции Air Control в составе моего чехла - специальная
-                        воздухопроницаемая 3D ткань, расположенная по периметру.</p>
+                        натуральным латексом.</p>
+                    <p class="order__text">Дополнительная система вентиляции Air Control в составе моего чехла -
+                        специальная воздухопроницаемая 3D ткань, расположенная по периметру.</p>
                     <p class="order__production">Срок изготовления до 5 дней</p>
                     <p class="order__price">Цена: 10 000 грн</p>
                     <button type="submit" class="order__submit">Заказать</button>
                 </div>
                 <div class="choose-size__btn"><span>Выбрать размер</span></div>
-                <div class="form__choose-size">
+                <div class="form__choose-size form__choose-size_hidden">
                     <div class="choose-size__wrapper">
-                        <input id="check01" type="radio" name="size" class="order__check" checked>
+                        <input id="check01" type="radio" name="size" value="70x190" class="order__check" checked>
                         <label for="check01" class="order__label">70 x 190</label>
-                        <input id="check02" type="radio" name="size" class="order__check">
+                        <input id="check02" type="radio" name="size" value="70 x 190" class="order__check">
                         <label for="check02" class="order__label">70 x 190</label>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="request-name" class="form-label name-label">Написать размер</label>
-                        <input id="request-name" class="form-input name-input" type="text" name="name">
+                        <input id="check03" type="radio" name="size" class="order__check">
+                        <label for="check03" class="order__label">70 x 190</label>
+                        <input id="check04" type="radio" name="size" class="order__check">
+                        <label for="check04" class="order__label">70 x 190</label>
+                        <input id="check05" type="radio" name="size" class="order__check">
+                        <label for="check05" class="order__label">70 x 190</label>
+                        <input id="check06" type="radio" name="size" class="order__check">
+                        <label for="check06" class="order__label">70 x 190</label>
+                        <input id="check07" type="radio" name="size" class="order__check">
+                        <label for="check07" class="order__label">70 x 190</label>
+                        <input class="form-input" type="text" name="custom-size" placeholder="Написать размер">
                     </div>
                 </div>
             </form>

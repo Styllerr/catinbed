@@ -32,13 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
             commentList = data.commentList;
             init("comment");
         })
+    const togglChooseSize = () => {
+        document.querySelector('.form__choose-size').classList.toggle('form__choose-size_hidden');
 
+    }
+    const togglShowModal = () => {
+        document.getElementById('order__modal').classList.toggle('modal__conteiner_hidden');
+        document.querySelector('.order__form').reset();
+    }
+
+    const showModal = (id) => {
+        createModal(id);
+        togglShowModal();
+        document.getElementById('cross').addEventListener('click', togglShowModal)
+        document.querySelector('.choose-size__btn > span').addEventListener('click', togglChooseSize)
+    }
     const createCards = (product) => {
         const carouselName = document.getElementById(product);
         const list = carouselName.querySelector('.ant-carousel-list');
-        list.addEventListener('click', (event) => {
-            console.log(event.target.id)
-        })
+        if (product !== 'comment') {
+            list.addEventListener('click', (event) => {
+                console.log(event.target.id)
+                showModal(event.target.id);
+            })
+        }
         const fragment = document.createDocumentFragment();
         if (product === "mattress") {
             mattressList.forEach(item => {
@@ -106,6 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 fragment.appendChild(tempNode);
             })
             list.appendChild(fragment);
+        }
+    }
+    const createModal = (productId) => {
+        let product,
+            productList;
+        if (productId.substring(0, 4) === "matt") {
+            product = 'mattress';
+            productList = mattressList.filter( item => item.id === productId)[0];
+            console.log(productList)
+        } else if (productId.substring(0, 4) === "pill") {
+            product = 'pillow';
+            productList = pillowList.filter( item => item.id === productId)[0];
+            console.log(productList)
         }
     }
     const init = (product) => {

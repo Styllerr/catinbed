@@ -31,6 +31,24 @@
     &__description {
         flex-basis: 49%;
     }
+    &__choose-size {
+        flex-basis: 100%;
+        margin-top: 1.75rem;
+        opacity: 1;
+        transition: 0.5s;
+        &_hidden {
+            height: 0;
+            opacity: 0;
+        }
+    }
+    &-input {
+        grid-row: span 2;
+        width: 220px;
+        height: 61px;
+        border: 1px solid #ffa901;
+        border-radius: 16px;
+        padding-left: 2rem;
+    }
 }
 .info {
     &__wrapper {
@@ -112,6 +130,7 @@ p + p.info__caption {
         margin-bottom: 1.5rem;
     }
     &__text {
+        margin: 0;
         font-weight: normal;
         font-size: 1.125rem;
         line-height: 1.3125rem;
@@ -133,7 +152,7 @@ p + p.info__caption {
         justify-content: space-between;
         flex-wrap: wrap;
         width: 1024px;
-        padding: 3.125rem 2.4375rem;
+        padding: 3.125rem 2.4375rem 1.5rem;
         background-color: white;
     }
     &__check {
@@ -141,10 +160,9 @@ p + p.info__caption {
     }
     &__label {
         position: relative;
-        font-size: 1.6875rem;
-        line-height: 147.5%;
+        font-size: 1.5625rem;
         padding-left: 4.0625rem;
-        margin-bottom: 2.3125rem;
+        margin-bottom: 0.8rem;
         &::before {
             position: absolute;
             content: "";
@@ -179,6 +197,7 @@ p + p.info__caption {
     &__btn {
         width: 222px;
         height: 56px;
+        cursor: pointer;
         border: 1px solid #ffa901;
         box-sizing: border-box;
         border-radius: 9px;
@@ -199,5 +218,10 @@ p + p.info__caption {
                 background-size: contain;
             }
         }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        grid-auto-flow: column;
     }
 }
