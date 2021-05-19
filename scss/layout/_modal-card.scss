@@ -75,7 +75,7 @@
         margin: 0.75rem 0 0;
     }
 }
-p+p.info__caption {
+p + p.info__caption {
     margin-top: 0.5rem;
 }
 #cross {
@@ -108,6 +108,25 @@ p+p.info__caption {
     }
 }
 .order {
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        letter-spacing: 0.02em;
+    }
+    &__production {
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+    }
+    &__price {
+        font-weight: bold;
+        font-size: 1.5625rem;
+        line-height: 1.9375rem;
+        margin: 1.25rem 0 1.0625rem;
+    }
     &__form {
         position: relative;
         display: flex;
@@ -154,6 +173,31 @@ p+p.info__caption {
         border: none;
         border-radius: 16px;
         filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
-        margin: 2rem auto 0;
+    }
+}
+.choose-size {
+    &__btn {
+        width: 222px;
+        height: 56px;
+        border: 1px solid #ffa901;
+        box-sizing: border-box;
+        border-radius: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > span {
+            position: relative;
+            color: #ffa901;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 4px;
+                right: -25px;
+                width: 13px;
+                height: 7px;
+                background: url(../image/svg/choose-arrow.svg) no-repeat;
+                background-size: contain;
+            }
+        }
     }
 }

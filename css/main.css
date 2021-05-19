@@ -907,6 +907,29 @@ p + p.info__caption {
   transform: rotate(-45deg);
 }
 
+.order__title {
+  margin-bottom: 1.5rem;
+}
+
+.order__text {
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.02em;
+}
+
+.order__production {
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+}
+
+.order__price {
+  font-weight: bold;
+  font-size: 1.5625rem;
+  line-height: 1.9375rem;
+  margin: 1.25rem 0 1.0625rem;
+}
+
 .order__form {
   position: relative;
   display: flex;
@@ -958,6 +981,32 @@ p + p.info__caption {
   border: none;
   border-radius: 16px;
   filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
-  margin: 2rem auto 0;
+}
+
+.choose-size__btn {
+  width: 222px;
+  height: 56px;
+  border: 1px solid #ffa901;
+  box-sizing: border-box;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-size__btn > span {
+  position: relative;
+  color: #ffa901;
+}
+
+.choose-size__btn > span::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  right: -25px;
+  width: 13px;
+  height: 7px;
+  background: url(../image/svg/choose-arrow.svg) no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=main.css.map */
