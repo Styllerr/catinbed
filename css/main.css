@@ -818,7 +818,7 @@ p.comment__text {
 }
 
 .form__description {
-  flex-basis: 49%;
+  width: 49%;
 }
 
 .form__choose-size {
@@ -1036,5 +1036,9 @@ p + p.info__caption {
   display: grid;
   grid-template-rows: repeat(5, min-content);
   grid-auto-flow: column;
+}
+
+.choose-wrapper {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

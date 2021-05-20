@@ -32,27 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
             commentList = data.commentList;
             init("comment");
         })
+
     const togglChooseSize = () => {
         document.querySelector('.form__choose-size').classList.toggle('form__choose-size_hidden');
-
     }
-    const togglShowModal = () => {
-        document.getElementById('order__modal').classList.toggle('modal__conteiner_hidden');
+
+    const closeModal = () => {
+        let choose = document.querySelector('.form__choose-size') || null;
         document.querySelector('.order__form').reset();
+        document.querySelector('.form__info').innerHTML = '';
+        document.querySelector('.form__description').innerHTML = '';
+        choose ? document.querySelector('.choose-wrapper').innerHTML = '' : null;
+        document.getElementById('order__modal').classList.add('modal__conteiner_hidden');
+        document.getElementById('cross').removeEventListener('click', closeModal);
+        document.body.style.overflowY = 'auto';
     }
 
     const showModal = (id) => {
         createModal(id);
-        togglShowModal();
-        document.getElementById('cross').addEventListener('click', togglShowModal)
-        document.querySelector('.choose-size__btn > span').addEventListener('click', togglChooseSize)
+        document.getElementById('order__modal').classList.remove('modal__conteiner_hidden');
+        document.getElementById('cross').addEventListener('click', closeModal);
+        if (id.substring(0, 4) === "matt") {
+            document.querySelector('.choose-size__btn > span').addEventListener('click', togglChooseSize)
+        }
+        document.body.style.overflowY = 'hidden';
     }
     const createCards = (product) => {
         const carouselName = document.getElementById(product);
         const list = carouselName.querySelector('.ant-carousel-list');
         if (product !== 'comment') {
             list.addEventListener('click', (event) => {
-                console.log(event.target.id)
                 showModal(event.target.id);
             })
         }
@@ -63,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tempNode.className = 'ant-carousel-element';
                 tempNode.innerHTML = `<div class="card__wrapper">
                                     <h2 class="card__title">${item.name}</h2>
-                                    <img id=${item.id} class="card__img" src="${item.imgPath}">
+                                    <img id=${item.id} class="card__img" src="${item.imgPath}" alt="Mattress image">
                                     <p class="price__wrapper">Цена: <span class="price">${item.price}</span></p>
                                     </div>`;
                 fragment.appendChild(tempNode);
@@ -126,17 +135,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     const createModal = (productId) => {
+        const actionForm = document.querySelector('.order__form'); /* Form для указания адреса */
+
+        const infoBlock = document.querySelector('.form__info');
+        const descriptionBlock = document.querySelector('.form__description');
+
         let product,
-            productList;
+            productList,
+            structure = "",
+            chooseSize = "",
+            descriptionText = "";
+
         if (productId.substring(0, 4) === "matt") {
             product = 'mattress';
-            productList = mattressList.filter( item => item.id === productId)[0];
-            console.log(productList)
+            productList = mattressList.filter(item => item.id === productId)[0];
         } else if (productId.substring(0, 4) === "pill") {
             product = 'pillow';
-            productList = pillowList.filter( item => item.id === productId)[0];
-            console.log(productList)
+            productList = pillowList.filter(item => item.id === productId)[0];
         }
+        productList.structure.forEach(item => {
+            structure += `<li>${item}</li>`
+        })
+        let contentInfo = `
+        <img src="${productList.imgPath}" alt="${product} image" class="info__img">
+            <div class="info__list-wrapper">
+            <p class="info__caption">Состав:</p>
+            <ul class="info__list">
+                ${structure}
+            </ul>
+            </div>
+        `
+        if (product === 'mattress') {
+            contentInfo += `
+            <div class="info__propert-wrapper">
+                <p class="info__caption">Высота:</p>
+                <p class="info__propert">${productList.height}.</p>
+                <p class="info__caption">Жесткость: </p>
+                <p class="info__propert">${productList.hardness}</p>
+            </div>
+            <p class="info__addtext">${productList.addText}</p>`;
+
+            chooseSize = `
+            <div class="choose-wrapper">
+            <div class="choose-size__btn"><span>Выбрать размер</span></div>
+            <div class="form__choose-size form__choose-size_hidden">
+                    <div class="choose-size__wrapper">`;
+
+            productList.size.forEach((item, index) => {
+                chooseSize += `
+                <input id="check0${index}" type="radio" name="size" value="${item}" class="order__check">
+                <label for="check0${index}" class="order__label">${item}</label>`
+            })
+            chooseSize += `
+            <input class="form-input" type="text" name="custom-size" placeholder="Написать размер">
+            </div></div></div>`;
+        }
+
+        infoBlock.innerHTML = contentInfo;
+
+        productList.description.forEach(item => {
+            descriptionText += `<p class="order__text">${item}</p>`
+        })
+        let contentDescription = `
+                    <h1 class="order__title">${productList.name}</h1>
+                    ${descriptionText}
+                    <p class="order__price">Цена: ${productList.price}</p>
+                    <button type="submit" class="order__submit">Заказать</button>
+        `
+        descriptionBlock.innerHTML = contentDescription;
+        descriptionBlock.insertAdjacentHTML('afterend', chooseSize);
     }
     const init = (product) => {
         createCards(product);
