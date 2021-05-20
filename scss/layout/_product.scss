@@ -1,20 +1,71 @@
+.mattress__img {
+    @media screen and (max-width: 1023px) {
+        background: url(../image/png/background-mattress1024.png) no-repeat;
+    }
+    background: url(../image/png/background-mattress.png) no-repeat;
+}
+.pillow__img {
+    @media screen and (max-width: 1023px) {
+        background: url(../image/png/background-pillow1024.png) no-repeat;
+    }
+    background: url(../image/png/background-pillow.png) no-repeat;
+}
 .mattress,
 .pillow {
     &__img-wrapper {
+        @media screen and (max-width: 1023px) {
+            width: 645px;
+            height: 781px;
+            flex-basis: 65%;
+        }
+        @media screen and (max-width: 767px) {
+            width: 645px;
+            height: 940px;
+            flex-basis: 100%;
+        }
         flex-basis: 58%;
     }
     &__img {
+        @media screen and (max-width: 1023px) {
+            background-position-y: bottom;
+        }
         width: 100%;
-        height: auto;
+        height: 100%;
+        background-size: contain;
+        background-position-y: center;
+        background-position-x: right;
     }
 }
+
 .product {
+    @media screen and (max-width: 1199px) {
+        margin: 0;
+    }
+    @media screen and (max-width: 1023px) {
+        margin: 0;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    position: relative;
     max-width: 1550px;
     margin: 0 4.5833% 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     &__wrapper {
+        @media screen and (max-width: 1023px) {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            margin: 0;
+            padding-top: 0;
+            width: 55%;
+        }
+        @media screen and (max-width: 767px) {
+            top: 100px;
+            width: 100%;
+            max-width: none;
+        }
         max-width: 610px;
         width: 45%;
         padding-top: 9.1rem;
@@ -22,8 +73,8 @@
     }
     &__title {
         font-weight: bold;
-        font-size: 45px;
-        line-height: 53px;
+        font-size: 2.8125rem;
+        line-height: 3.3125rem;
         color: #000000;
         text-align: left;
         margin: 0;
@@ -32,23 +83,56 @@
         margin: 2.1875rem 0 5rem;
         text-align: left;
         &-item {
-            font-size: 20px;
+            font-size: 1.25rem;
             line-height: 154.4%;
         }
     }
     &__description {
+        @media screen and (max-width: 1023px) {
+            display: none;
+        }
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, max-content);
         gap: 3.125rem 3.5rem;
     }
     &__select-btn {
+        @media screen and (max-width: 1023px) {
+            margin: 0;
+        }
         display: block;
         text-align: center;
         margin: 0 auto;
+        &:visited {
+            color: white;
+        }
     }
     &__btn-wrapper {
         width: 100%;
+    }
+}
+.mattress + .product__btn-wrapper {
+    @media screen and (max-width: 1023px) {
+        position: absolute;
+        top: 500px;
+        left: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 400px;
+        left: 1rem;
+    }
+}
+.pillow + .product__btn-wrapper {
+    @media screen and (max-width: 1023px) {
+        position: absolute;
+        top: 1250px;
+        left: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 1330px;
+        left: 1rem;
     }
 }
 .description {

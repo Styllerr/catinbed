@@ -1,4 +1,7 @@
 .site-btn {
+    @media screen and (max-width: 1023px) {
+        width: 259px;
+    }
     max-width: 329px;
     width: 100%;
     padding: 1.79rem 0;
@@ -56,5 +59,22 @@
         line-height: 1.25rem;
         margin: 0;
         justify-self: end;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header__contacts > .header__callback-btn {
+        width: max-content;
+        border: none;
+        background: none;
+        text-decoration: underline;
+        color: #ffa901;
+        
+    }
+    .contacts__time {
+        display: none;
+    }
+    .header__contacts {
+        display: block;
+        text-align: right;
     }
 }

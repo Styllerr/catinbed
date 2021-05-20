@@ -1,4 +1,13 @@
 html {
+    @media screen and (max-width: 1200px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 1023px) {
+        font-size: 12.6px;
+    }
+    @media screen and (max-width: 479px) {
+        font-size: 10px;
+    }
     box-sizing: border-box;
     font-family: "Roboto";
     font-style: normal;

@@ -390,6 +390,24 @@ html {
   background-color: rgba(173, 173, 173, 0.8);
 }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 12.6px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 10px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -423,6 +441,12 @@ main {
   font-size: 1.5625rem;
   line-height: 1.8125rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .site-btn {
+    width: 259px;
+  }
 }
 
 .header-wrapper {
@@ -477,23 +501,103 @@ main {
   justify-self: end;
 }
 
+@media screen and (max-width: 767px) {
+  .header__contacts > .header__callback-btn {
+    width: max-content;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: #ffa901;
+  }
+  .contacts__time {
+    display: none;
+  }
+  .header__contacts {
+    display: block;
+    text-align: right;
+  }
+}
+
+.mattress__img {
+  background: url(../image/png/background-mattress.png) no-repeat;
+}
+
+@media screen and (max-width: 1023px) {
+  .mattress__img {
+    background: url(../image/png/background-mattress1024.png) no-repeat;
+  }
+}
+
+.pillow__img {
+  background: url(../image/png/background-pillow.png) no-repeat;
+}
+
+@media screen and (max-width: 1023px) {
+  .pillow__img {
+    background: url(../image/png/background-pillow1024.png) no-repeat;
+  }
+}
+
 .mattress__img-wrapper,
 .pillow__img-wrapper {
   flex-basis: 58%;
 }
 
+@media screen and (max-width: 1023px) {
+  .mattress__img-wrapper,
+  .pillow__img-wrapper {
+    width: 645px;
+    height: 781px;
+    flex-basis: 65%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mattress__img-wrapper,
+  .pillow__img-wrapper {
+    width: 645px;
+    height: 940px;
+    flex-basis: 100%;
+  }
+}
+
 .mattress__img,
 .pillow__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: right;
+}
+
+@media screen and (max-width: 1023px) {
+  .mattress__img,
+  .pillow__img {
+    background-position-y: bottom;
+  }
 }
 
 .product {
+  position: relative;
   max-width: 1550px;
   margin: 0 4.5833% 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1199px) {
+  .product {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .product {
+    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .product__wrapper {
@@ -503,10 +607,29 @@ main {
   margin-bottom: 3.125rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .product__wrapper {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    margin: 0;
+    padding-top: 0;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product__wrapper {
+    top: 100px;
+    width: 100%;
+    max-width: none;
+  }
+}
+
 .product__title {
   font-weight: bold;
-  font-size: 45px;
-  line-height: 53px;
+  font-size: 2.8125rem;
+  line-height: 3.3125rem;
   color: #000000;
   text-align: left;
   margin: 0;
@@ -518,7 +641,7 @@ main {
 }
 
 .product__list-item {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 154.4%;
 }
 
@@ -529,14 +652,62 @@ main {
   gap: 3.125rem 3.5rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .product__description {
+    display: none;
+  }
+}
+
 .product__select-btn {
   display: block;
   text-align: center;
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1023px) {
+  .product__select-btn {
+    margin: 0;
+  }
+}
+
+.product__select-btn:visited {
+  color: white;
+}
+
 .product__btn-wrapper {
   width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  .mattress + .product__btn-wrapper {
+    position: absolute;
+    top: 500px;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mattress + .product__btn-wrapper {
+    position: absolute;
+    top: 400px;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .pillow + .product__btn-wrapper {
+    position: absolute;
+    top: 1250px;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pillow + .product__btn-wrapper {
+    position: absolute;
+    top: 1330px;
+    left: 1rem;
+  }
 }
 
 .description__icon-wrapper {
@@ -605,6 +776,12 @@ main {
   border-radius: 0.75rem;
 }
 
+@media screen and (max-width: 479px) {
+  .card__wrapper {
+    width: 80%;
+  }
+}
+
 .card__wrapper > p {
   margin: 0;
   font-weight: bold;
@@ -652,15 +829,36 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
   .ant-carousel {
-    max-width: 690px;
+    max-width: 1121px;
+  }
+  .carousel-feedback > .ant-carousel {
+    max-width: 996px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .ant-carousel {
-    max-width: 343px;
+    max-width: 755px;
+  }
+  .carousel-feedback > .ant-carousel {
+    max-width: 509px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ant-carousel {
+    max-width: 389px;
+  }
+  .carousel-feedback > .ant-carousel {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .ant-carousel {
+    max-width: 310px;
   }
 }
 
@@ -722,11 +920,25 @@ div.ant-carousel-arrow-left {
   background: url(../image/png/ant-arrow-left.png) no-repeat;
 }
 
+@media screen and (max-width: 1024px) {
+  div.ant-carousel-arrow-left {
+    width: 0;
+    height: 0;
+  }
+}
+
 div.ant-carousel-arrow-right {
   right: -40px;
   top: 40%;
   display: block;
   background: url(../image/png/ant-arrow-right.png) no-repeat;
+}
+
+@media screen and (max-width: 1024px) {
+  div.ant-carousel-arrow-right {
+    width: 0;
+    height: 0;
+  }
 }
 
 div.ant-carousel-arrow-left:hover {
@@ -757,6 +969,12 @@ span.ant-dot {
 
 .comment__wrapper {
   padding: 2rem 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .comment__wrapper {
+    width: 80%;
+  }
 }
 
 .comment__name {
