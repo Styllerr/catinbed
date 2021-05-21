@@ -75,7 +75,6 @@
     .carousel-feedback > .ant-carousel {
         max-width: 996px;
     }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -98,6 +97,9 @@
     .ant-carousel {
         max-width: 310px;
     }
+    .carousel-feedback > .ant-carousel {
+        max-width: 320px;
+    }
 }
 
 .ant-carousel {
@@ -111,6 +113,9 @@
 }
 .comment-carousel-element {
     width: 467px;
+    @media screen and (max-width: 479px) {
+        width: 320px;
+    }
 }
 /* General styles */
 .ant-carousel {
@@ -199,8 +204,9 @@ span.ant-dot {
 .comment {
     &__wrapper {
         @media screen and (max-width: 767px) {
-        width: 80%;
+            width: 80%;
         }
+
         padding: 2rem 2.5rem;
     }
     &__name {
