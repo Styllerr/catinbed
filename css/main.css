@@ -1072,7 +1072,7 @@ p.comment__text {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 5;
+  z-index: 32;
 }
 
 .modal__conteiner_hidden {
@@ -1092,10 +1092,23 @@ p.comment__text {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .form__info {
+    flex-basis: 42%;
+  }
 }
 
 .form__description {
   width: 49%;
+}
+
+@media screen and (max-width: 767px) {
+  .form__description {
+    flex-basis: 57%;
+  }
 }
 
 .form__choose-size {
@@ -1112,8 +1125,8 @@ p.comment__text {
 
 .form-input {
   grid-row: span 2;
-  width: 220px;
-  height: 61px;
+  width: 13.75rem;
+  height: 3.8125rem;
   border: 1px solid #ffa901;
   border-radius: 16px;
   padding-left: 2rem;
@@ -1141,6 +1154,12 @@ p.comment__text {
   padding: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .info__list {
+    flex-basis: 80%;
+  }
+}
+
 .info__list > li {
   font-weight: 400;
   font-size: 1rem;
@@ -1149,6 +1168,12 @@ p.comment__text {
 
 .info__list-wrapper {
   flex-basis: 60%;
+}
+
+@media screen and (max-width: 767px) {
+  .info__list-wrapper {
+    flex-basis: 80%;
+  }
 }
 
 .info__propert {
@@ -1161,12 +1186,24 @@ p.comment__text {
   flex-basis: 37%;
 }
 
+@media screen and (max-width: 767px) {
+  .info__propert-wrapper {
+    flex-basis: 80%;
+  }
+}
+
 .info__addtext {
   flex-basis: 100%;
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 1.3125rem;
   margin: 0.75rem 0 0;
+}
+
+@media screen and (max-width: 767px) {
+  .info__addtext {
+    flex-basis: 80%;
+  }
 }
 
 p + p.info__caption {
@@ -1247,7 +1284,7 @@ p + p.info__caption {
   position: relative;
   font-size: 1.5625rem;
   padding-left: 4.0625rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .order__label::before {
@@ -1268,8 +1305,9 @@ p + p.info__caption {
 }
 
 .order__submit {
-  width: 274px;
-  height: 86px;
+  max-width: 274px;
+  width: 50%;
+  height: 5.375rem;
   font-weight: bold;
   font-size: 1.5625rem;
   line-height: 1.8125rem;
@@ -1313,6 +1351,13 @@ p + p.info__caption {
   display: grid;
   grid-template-rows: repeat(5, min-content);
   grid-auto-flow: column;
+  gap: 0 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .choose-size__wrapper {
+    grid-template-rows: repeat(7, min-content);
+  }
 }
 
 .choose-wrapper {
