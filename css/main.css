@@ -468,6 +468,18 @@ main {
   max-width: 158px;
 }
 
+@media screen and (max-width: 767px) {
+  .header__logo-wrapper {
+    max-width: 116px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header__logo-wrapper {
+    max-width: 86px;
+  }
+}
+
 .header__logo {
   width: 100%;
   height: auto;
@@ -1063,6 +1075,11 @@ p.comment__text {
   font-size: 1.875rem;
 }
 
+#map {
+  width: 100%;
+  height: 568px;
+}
+
 .modal__conteiner {
   position: fixed;
   top: 0;
@@ -1101,13 +1118,29 @@ p.comment__text {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .form__info {
+    flex-basis: 100%;
+  }
+}
+
 .form__description {
+  padding-bottom: 1rem;
   width: 49%;
 }
 
 @media screen and (max-width: 767px) {
   .form__description {
     flex-basis: 57%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .form__description {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
   }
 }
 
@@ -1143,6 +1176,13 @@ p.comment__text {
   height: auto;
 }
 
+@media screen and (max-width: 479px) {
+  .info__img {
+    width: 50%;
+    order: 1;
+  }
+}
+
 .info__caption {
   font-size: 1.3125rem;
   line-height: 170.4%;
@@ -1157,6 +1197,12 @@ p.comment__text {
 @media screen and (max-width: 767px) {
   .info__list {
     flex-basis: 80%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .info__list {
+    column-count: 2;
   }
 }
 
@@ -1176,6 +1222,13 @@ p.comment__text {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .info__list-wrapper {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+
 .info__propert {
   font-weight: 400;
   font-size: 1rem;
@@ -1192,6 +1245,20 @@ p.comment__text {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .info__propert-wrapper {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    order: 2;
+  }
+  .info__propert-wrapper > p {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
 .info__addtext {
   flex-basis: 100%;
   font-weight: normal;
@@ -1203,6 +1270,7 @@ p.comment__text {
 @media screen and (max-width: 767px) {
   .info__addtext {
     flex-basis: 80%;
+    order: 4;
   }
 }
 
@@ -1246,12 +1314,26 @@ p + p.info__caption {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 479px) {
+  .order__title {
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+
 .order__text {
   margin: 0;
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 479px) {
+  .order__text {
+    flex-basis: 100%;
+    order: 2;
+  }
 }
 
 .order__production {
@@ -1264,6 +1346,22 @@ p + p.info__caption {
   font-size: 1.5625rem;
   line-height: 1.9375rem;
   margin: 1.25rem 0 1.0625rem;
+}
+
+@media screen and (max-width: 479px) {
+  .order__price {
+    display: flex;
+    align-items: center;
+    order: 5;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .order__price {
+    display: block;
+    flex-basis: 100%;
+    order: 3;
+  }
 }
 
 .order__form {
@@ -1319,9 +1417,27 @@ p + p.info__caption {
   filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
 }
 
+@media screen and (max-width: 479px) {
+  .order__submit {
+    margin-top: 2rem;
+    max-width: 222px;
+    width: 60%;
+    order: 4;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .order__submit {
+    margin-top: 1rem;
+    max-width: 222px;
+    width: 60%;
+    order: 4;
+  }
+}
+
 .choose-size__btn {
-  width: 222px;
-  height: 56px;
+  width: 13.875rem;
+  height: 3.5rem;
   cursor: pointer;
   border: 1px solid #ffa901;
   box-sizing: border-box;
@@ -1329,6 +1445,13 @@ p + p.info__caption {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  .choose-size__btn {
+    max-width: 222px;
+    width: 60%;
+  }
 }
 
 .choose-size__btn > span {
@@ -1357,6 +1480,12 @@ p + p.info__caption {
 @media screen and (max-width: 767px) {
   .choose-size__wrapper {
     grid-template-rows: repeat(7, min-content);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .choose-size__wrapper {
+    grid-template-rows: repeat(10, min-content);
   }
 }
 

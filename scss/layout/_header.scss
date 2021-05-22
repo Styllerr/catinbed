@@ -28,6 +28,12 @@
     justify-content: space-between;
     align-items: center;
     &__logo-wrapper {
+        @media screen and (max-width: 767px) {
+            max-width: 116px;
+        }
+        @media screen and (max-width: 479px) {
+            max-width: 86px;
+        }
         max-width: 158px;
     }
     &__logo {
@@ -50,7 +56,6 @@
 .contacts {
     &__number {
         @media screen and (max-width: 479px) {
-        
             font-size: 1.2625rem;
         }
         font-weight: bold;
@@ -73,7 +78,6 @@
         background: none;
         text-decoration: underline;
         color: #ffa901;
-        
     }
     .contacts__time {
         display: none;
