@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script/create-card.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <title>Cat bed</title>
 </head>
 
@@ -138,9 +138,6 @@
     <footer class="site-footer">
         <h2 class="footer__title">Наши магазины</h2>
         <div id="map"></div>
-        <!-- <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57915.09058134811!2d36.22646229849492!3d50.09546821483582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a651e8fc047f%3A0xbb3583ca04851d54!2z0YPQuy4g0JPQsNCz0LDRgNC40L3QsCwgMjAsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1621352694474!5m2!1sru!2sua"
-            style="border:0; width: 100%; height: 568px;" allowfullscreen="" loading="lazy"></iframe> -->
     </footer>
     <div id="order__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
@@ -157,84 +154,9 @@
     <script src="./script/googlemap.js"></script>
     
     <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu5WG4Czd9JjWZ0S8ai1AP70gxtiJ9drM&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrtzfbbr7QEOJZjKdZGm7oXieyw4WrZSg&callback=initMap">
 </script>
-    <script>
-        var coords = [
-            {
-                "id": "map_1",
-                "name": "Дворец Спорта",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/IMG_3532-270x144.jpg",
-                "coordinates": "49.96642598034989, 36.32373518650829",
-                "address": "пр. Московский 257, возле выхода м. “Дворец Спорта”",
-                "tel": ["(063) 371-06-37", "(098) 036-59-41", "(099) 103-36-14"],
-                "schedule": "с 10 до 19 без выходных<br>с 10 до 16 в воскресенье"
-            },
-            {
-                "id": "map_2",
-                "name": "Гагарина",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/map-home-270x144.jpg",
-                "coordinates": "49.98048820152708, 36.24509717218532",
-                "address": "пр. Гагарина 20, возле выхода м. “Гагарина”",
-                "tel": ["(093) 154-33-20", "(098) 551-44-04", "(095) 721-36-33"],
-                "schedule": "с 10 до 19 без выходных<br>с 10 до 17 в воскресенье"
-            },
-            {
-                "id": "map_3",
-                "name": "“КЛАСС” на Клочковской",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/photo_2021-03-25_18-20-32-270x144.jpg",
-                "coordinates": "50.002744, 36.219002",
-                "address": "ул. Клочковская 104А, супермаркет “КЛАСС”",
-                "tel": ["(093) 185-18-89", "(097) 916-55-64", "(066) 788-93-55"],
-                "schedule": "с 10 до 20 без выходных"
-            },
-            {
-                "id": "map_4",
-                "name": "Салтовка",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/saltovka-270x144.jpg",
-                "coordinates": "50.00153188014247, 36.34028096826544",
-                "address": "ТРК “Украина” пр. Тракторостроителей 59/56, нулевой этаж",
-                "tel": ["(093) 725-10-50", "(067) 697-43-20", "(099) 024-93-11"],
-                "schedule": "с 10 до 20 без выходных"
-            },
-            {
-                "id": "map_5",
-                "name": "Метро Индустриальная",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/IMG_3570-270x144.jpeg",
-                "coordinates": "49.946632, 36.3995449",
-                "address": "Метро Индустриальная<br>проспект Московский 293А<br>ТЦ “Авангард”, нулевой этаж",
-                "tel": ["(063) 600-68-02", "(098) 058-49-55", "(050) 967-66-69"],
-                "schedule": "с 10 до 19 без выходных<br>с 9 до 19 в субботу<br>с 9 до 17 в воскресенье"
-            },
-            {
-                "id": "map_6",
-                "name": "Центральный рынок",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/zrinok-270x144.jpg",
-                "coordinates": "49.99396318789528, 36.22440027116391",
-                "address": "ст.м. Центральный рынок<br>ул. Рождественская 33<br>правое крыло здания рынка",
-                "tel": ["(093) 341-59-90", "(098) 704-28-08", "(066) 490-60-44"],
-                "schedule": "с 8 до 17 вт-сб<br>с 8 до 16 в воскресенье<br>понедельник выходной"
-            },
-            {
-                "id": "map_7",
-                "name": "Холодная гора",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/hgora-270x144.jpg",
-                "coordinates": "49.98495881112977, 36.18701750926345",
-                "address": "ст.м. Холодная гора<br>Полтавский шлях 142а (возле РОСТа)",
-                "tel": ["(073) 011-55-85", "(068) 101-46-33", "(066) 618-96-50"],
-                "schedule": "с 10 до 19 без выходных<br>с 10 до 17 в субботу<br>с 10 до 16 в воскресенье"
-            },
-            {
-                "id": "map_8",
-                "name": "Песочин",
-                "img": "https://www.mebelvdom.org/image/cache/catalog/shops/pesochin-270x144.jpg",
-                "coordinates": "49.962444954673806, 36.09592251059324",
-                "address": "“Мобиль” площадь Торговая 2/4",
-                "tel": ["(073) 022-19-37", "(068) 29-23-259", "(099) 98-40-796"],
-                "schedule": "с 9 до 18 без выходных<br>в воскресенье до 17"
-            },
-        ]
-    </script>
+    
 </body>
 
 </html>
