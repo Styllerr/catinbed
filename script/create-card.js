@@ -1,3 +1,5 @@
+let productList
+
 document.addEventListener('DOMContentLoaded', () => {
     let mattressList = [];
     let pillowList = [];
@@ -134,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             list.appendChild(fragment);
         }
     }
+
     const createModal = (productId) => {
         const actionForm = document.querySelector('.order__form'); /* Form для указания адреса */
 
@@ -141,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const descriptionBlock = document.querySelector('.form__description');
 
         let product,
-            productList,
             structure = "",
             chooseSize = "",
             descriptionText = "";
@@ -181,10 +183,25 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="form__choose-size form__choose-size_hidden">
                     <div class="choose-size__wrapper">`;
 
-            productList.size.forEach((item, index) => {
-                chooseSize += `
-                <input id="check0${index}" type="radio" name="size" value="${item}" class="order__check">
-                <label for="check0${index}" class="order__label">${item}</label>`
+            productList.sizePrice.forEach((item, index) => {
+                if (index == 0) {
+                    chooseSize += `
+                <input id="check0${index}" 
+                type="radio" name="size" 
+                value="${item.size}" 
+                class="order__check"
+                onclick="setPrice('${item.size}')" 
+                checked>
+                <label for="check0${index}" class="order__label">${item.size}</label>`
+                } else {
+                    chooseSize += `
+                    <input id="check0${index}" 
+                    type="radio" name="size" 
+                    value="${item.size}" 
+                    class="order__check"
+                    onclick="setPrice('${item.size}')">
+                    <label for="check0${index}" class="order__label">${item.size}</label>`
+                }
             })
             chooseSize += `
             <input class="form-input" type="text" name="custom-size" placeholder="Написать размер">
@@ -210,3 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new Ant(product);
     }
 })
+
+const setPrice = (size) => {
+    let newPrice = productList.sizePrice.find(item => item.size === size).price;
+    document.querySelector('p.order__price').innerText = `Цена: ${newPrice}`
+}
