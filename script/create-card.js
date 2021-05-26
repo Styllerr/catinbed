@@ -1,6 +1,6 @@
 let productList,
-    actionCallback = './##',
-    actionSendOrder = '##'
+    actionCallback = './php/callback.php',
+    actionSendOrder = './php/send-order.php'
 
 document.addEventListener('DOMContentLoaded', () => {
     let mattressList = [];
@@ -237,6 +237,7 @@ const setPrice = (size) => {
 }
 function createOrder(event, type) {
     event.preventDefault;
+    document.querySelector('.feedback__form').reset(),
     document.body.style.overflowY = 'hidden';
     document.getElementById('feedback__cross').addEventListener('click', closeOrder);
     if (type === 'order') {
@@ -244,14 +245,20 @@ function createOrder(event, type) {
         document.querySelector('.order__wrapper').style.display = 'block';
         let data = { productName: productList.name }
         document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
+        let customSize = document.querySelector('.form-input') || null;
         let size = document.querySelector('input:checked') || null;
-        size ? data.size = size.value : data.size = productList.size.join('x');
-        size ? data.price = productList.sizePrice.find(item => item.size === size.value).price : data.price = productList.price
+        if(customSize && customSize.value) {
+            data.size = customSize.value;
+            data.price = "Вам сообщит менеджер";
+        }else {
+            size ? data.size = size.value : data.size = productList.size.join('x');
+            size ? data.price = productList.sizePrice.find(item => item.size === size.value).price : data.price = productList.price
+        }
         
         document.querySelector('.order__product').value = `Наименование: ${data.productName}`;
         document.querySelector('.order__product-size').value = `Размер: ${data.size}`;
         document.querySelector('.order__product-price').value = `Цена: ${data.price}`;
-        console.log(data)
+        document.querySelector('.feedback__submit').value = 'Подтвердить';
     } else if (type === 'callback') {
         document.querySelector('.feedback__form').setAttribute('action', actionCallback);
         document.querySelector('.order__wrapper').style.display = 'none';

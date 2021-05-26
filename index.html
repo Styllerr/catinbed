@@ -150,7 +150,7 @@
     </div>
     <div id="feedback__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
-            <form action="#" class="feedback__form">
+            <form action="#" method="POST" class="feedback__form">
                 <div class="form__container">
                     <div id="feedback__cross" class="form__cross"></div>
                     <h1 class="feedback__title">Оформить заказ</h1>
@@ -166,9 +166,9 @@
                     <p class="feedback__text">Наш менеджер обязательно с Вами свяжется.</p>
                     <div class="order__wrapper">
                         <h3 class="order__caption">Ваш заказ:</h3>
-                        <input type="text" disabled class="order__product" value="Наименование: «Cat in Bed» Cocos">
-                        <input type="text" disabled class="order__product-size" value="Размер: 120x190">
-                        <input type="text" disabled class="order__product-price" value="Цена: 2 990 грн">
+                        <input type="text" name="product" readonly class="order__product" value="">
+                        <input type="text" name="size" readonly class="order__product-size" value="">
+                        <input type="text" name="price" readonly class="order__product-price" value="">
                     </div>
                     <input type="submit" value="Подтвердить" class="feedback__submit">
 
