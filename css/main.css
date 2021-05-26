@@ -1282,6 +1282,20 @@ p + p.info__caption {
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .form__cross {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .form__cross {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .form__cross:before, .form__cross:after {
   content: "";
   position: absolute;
@@ -1509,7 +1523,7 @@ p + p.info__caption {
   font-size: 1.5625rem;
 }
 
-.feedback__title + p {
+.feedback__text {
   width: 100%;
   text-align: center;
   font-weight: normal;
@@ -1519,6 +1533,7 @@ p + p.info__caption {
 .feedback__name-label, .feedback__phone-label {
   display: inline-block;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .feedback__name-label::after, .feedback__phone-label::after {
@@ -1528,6 +1543,7 @@ p + p.info__caption {
 
 .feedback__name, .feedback__phone {
   width: 100%;
+  margin-top: 0.5rem;
   font-size: 1.125rem;
   padding: 1.125rem;
   border: 1px solid #ffa901;
@@ -1540,13 +1556,17 @@ p + p.info__caption {
 
 .feedback__submit {
   display: block;
-  margin: 0 auto;
+  margin: 1.5rem auto 0;
   width: 13.875rem;
   height: 3.5rem;
   cursor: pointer;
   border: 1px solid #ffa901;
+  background-color: #ffa901;
   box-sizing: border-box;
   border-radius: 9px;
+  font-weight: bold;
+  font-size: 1.5625rem;
+  color: #ffffff;
 }
 
 .order__wrapper {
@@ -1555,6 +1575,16 @@ p + p.info__caption {
   border: 1px solid #ffa901;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.order__wrapper > input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.order__caption {
+  margin-top: 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -221,12 +221,23 @@ document.addEventListener('DOMContentLoaded', () => {
         `
         descriptionBlock.innerHTML = contentDescription;
         descriptionBlock.insertAdjacentHTML('afterend', chooseSize);
+
     }
     const init = (product) => {
         createCards(product);
         new Ant(product);
     }
 })
+const createOrder = () => {
+    event.preventDefault;
+    document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
+    let data = {
+        productName: document.querySelector('.order__title').innerText,
+        size,
+        price: document.querySelector('.order__price').innerText
+    }
+    console.log(data);
+}
 
 const setPrice = (size) => {
     let newPrice = productList.sizePrice.find(item => item.size === size).price;

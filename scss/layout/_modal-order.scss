@@ -16,17 +16,18 @@
         text-align: center;
         font-weight: 500;
         font-size: 1.5625rem;
-        & + p {
-            width: 100%;
-            text-align: center;
-            font-weight: normal;
-            font-size: 1.125rem;
-        }
+    }
+    &__text{
+        width: 100%;
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.125rem;
     }
     &__name-label,
     &__phone-label {
         display: inline-block;
         width: 100%;
+        margin-top: 0.5rem;
         &::after {
             content: "*";
             color: red;
@@ -35,6 +36,7 @@
     &__name,
     &__phone {
         width: 100%;
+        margin-top: 0.5rem;
         font-size: 1.125rem;
         padding: 1.125rem;
         border: 1px solid #ffa901;
@@ -45,13 +47,17 @@
     }
     &__submit {
         display: block;
-        margin: 0 auto;
+        margin: 1.5rem auto 0;
         width: 13.875rem;
         height: 3.5rem;
         cursor: pointer;
         border: 1px solid #ffa901;
+        background-color: #ffa901;
         box-sizing: border-box;
         border-radius: 9px;
+        font-weight: bold;
+        font-size: 1.5625rem;
+        color: #ffffff;
     }
 }
 .order {
@@ -61,7 +67,14 @@
         border: 1px solid #ffa901;
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         border-radius: 1rem;
-        padding: 1rem;
-        
+        padding: 0.5rem 1rem;
+        & > input {
+            display: block;
+            width: 100%;
+            margin: 0.5rem;
+        }
+    }
+    &__caption {
+        margin-top: 0;
     }
 }
