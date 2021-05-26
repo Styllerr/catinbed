@@ -141,7 +141,7 @@
     </footer>
     <div id="order__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
-            <form action="#" class="order__form" onsubmit="createOrder(this)">
+            <form class="order__form" onsubmit="createOrder(event); return false">
                 <div id="order__cross" class="form__cross"></div>
                 <div class="form__info"></div>
                 <div class="form__description"></div>

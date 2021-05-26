@@ -228,18 +228,20 @@ document.addEventListener('DOMContentLoaded', () => {
         new Ant(product);
     }
 })
-const createOrder = () => {
+
+const setPrice = (size) => {
+    let newPrice = productList.sizePrice.find(item => item.size === size).price;
+    document.querySelector('p.order__price').innerText = `Цена: ${newPrice}`
+}
+function createOrder(event) {
     event.preventDefault;
+    console.log(productList)
     document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
+    let size = document.querySelector('input:checked').value;
     let data = {
         productName: document.querySelector('.order__title').innerText,
         size,
         price: document.querySelector('.order__price').innerText
     }
     console.log(data);
-}
-
-const setPrice = (size) => {
-    let newPrice = productList.sizePrice.find(item => item.size === size).price;
-    document.querySelector('p.order__price').innerText = `Цена: ${newPrice}`
 }
