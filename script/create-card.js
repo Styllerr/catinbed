@@ -1,4 +1,6 @@
-let productList
+let productList,
+    actionCallback = './##',
+    actionSendOrder = '##'
 
 document.addEventListener('DOMContentLoaded', () => {
     let mattressList = [];
@@ -233,15 +235,34 @@ const setPrice = (size) => {
     let newPrice = productList.sizePrice.find(item => item.size === size).price;
     document.querySelector('p.order__price').innerText = `Цена: ${newPrice}`
 }
-function createOrder(event) {
+function createOrder(event, type) {
     event.preventDefault;
-    console.log(productList)
-    document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
-    let size = document.querySelector('input:checked').value;
-    let data = {
-        productName: document.querySelector('.order__title').innerText,
-        size,
-        price: document.querySelector('.order__price').innerText
+    document.body.style.overflowY = 'hidden';
+    document.getElementById('feedback__cross').addEventListener('click', closeOrder);
+    if (type === 'order') {
+        document.querySelector('.feedback__form').setAttribute('action', actionSendOrder);
+        document.querySelector('.order__wrapper').style.display = 'block';
+        let data = { productName: productList.name }
+        document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
+        let size = document.querySelector('input:checked') || null;
+        size ? data.size = size.value : data.size = productList.size.join('x');
+        size ? data.price = productList.sizePrice.find(item => item.size === size.value).price : data.price = productList.price
+        
+        document.querySelector('.order__product').value = `Наименование: ${data.productName}`;
+        document.querySelector('.order__product-size').value = `Размер: ${data.size}`;
+        document.querySelector('.order__product-price').value = `Цена: ${data.price}`;
+        console.log(data)
+    } else if (type === 'callback') {
+        document.querySelector('.feedback__form').setAttribute('action', actionCallback);
+        document.querySelector('.order__wrapper').style.display = 'none';
+        document.querySelector('.feedback__title').innerText = 'Обратный звонок';
+        document.querySelector('.feedback__submit').value = 'Перезвоните мне';
+        document.getElementById('feedback__modal').classList.remove('modal__conteiner_hidden');
     }
-    console.log(data);
+}
+const closeOrder = () => {
+    document.querySelector('.feedback__form').reset();
+    document.getElementById('feedback__cross').removeEventListener('click', closeOrder);
+    document.getElementById('feedback__modal').classList.add('modal__conteiner_hidden');
+    document.body.style.overflowY = 'auto';
 }

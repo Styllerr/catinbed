@@ -1160,6 +1160,10 @@ p.comment__text {
   padding-left: 2rem;
 }
 
+.form-input:focus {
+  outline: none;
+}
+
 .info__wrapper {
   display: flex;
   justify-content: space-between;
@@ -1424,6 +1428,7 @@ p + p.info__caption {
   border: none;
   border-radius: 16px;
   filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.13));
+  cursor: pointer;
 }
 
 @media screen and (max-width: 479px) {
