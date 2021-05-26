@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script/create-card.js"></script>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Cat in bed</title>
 </head>
 
@@ -142,9 +142,37 @@
     <div id="order__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
             <form action="#" class="order__form">
-                <div id="cross" class="form__cross"></div>
+                <div id="order__cross" class="form__cross"></div>
                 <div class="form__info"></div>
                 <div class="form__description"></div>
+            </form>
+        </div>
+    </div>
+    <div id="feedback__modal" class="modal__conteiner">
+        <div class="modal__wrapper">
+            <form action="#" class="feedback__form">
+                <div class="form__container">
+                    <div id="feedback__cross" class="form__cross"></div>
+                    <h1 class="feedback__title">Оформить заказ</h1>
+                    <p>Введите контактные данные</p>
+                    <div class="input-wrapper">
+                        <label for="feedback__name" class="feedback__name-label">Ваше имя </label>
+                        <input id="feedback__name" type="text" name="name" class="feedback__name">
+                        </div>
+                    <div class="input-wrapper">
+                        <label for="feedback__phone" class="feedback__phone-label">Ваш номер телефона </label>
+                        <input id="feedback__phone" type="tel" name="phone" class="feedback__phone">
+                    </div>
+
+                    <div class="order__wrapper">
+                        <h3 class="order__caption">Ваш заказ:</h3>
+                        <p class="order__product">Наименование: «Cat in Bed» Cocos"</p>
+                        <p class="order__product-size">Размер: 120x190</p>
+                        <div class="order__product-price">Цена: 2 990 грн</div>
+                    </div>
+                    <input type="submit" value="Подтвердить" class="feedback__submit">
+
+                </div>
             </form>
         </div>
     </div>

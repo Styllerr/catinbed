@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.form__description').innerHTML = '';
         choose ? document.querySelector('.choose-wrapper').innerHTML = '' : null;
         document.getElementById('order__modal').classList.add('modal__conteiner_hidden');
-        document.getElementById('cross').removeEventListener('click', closeModal);
+        document.getElementById('order__cross').removeEventListener('click', closeModal);
         document.body.style.overflowY = 'auto';
     }
 
     const showModal = (id) => {
         createModal(id);
         document.getElementById('order__modal').classList.remove('modal__conteiner_hidden');
-        document.getElementById('cross').addEventListener('click', closeModal);
+        document.getElementById('order__cross').addEventListener('click', closeModal);
         if (id.substring(0, 4) === "matt") {
             document.querySelector('.choose-size__btn > span').addEventListener('click', togglChooseSize)
         }

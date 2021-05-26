@@ -1273,7 +1273,7 @@ p + p.info__caption {
   margin-top: 0.5rem;
 }
 
-#cross {
+.form__cross {
   width: 29px;
   height: 29px;
   position: absolute;
@@ -1282,14 +1282,14 @@ p + p.info__caption {
   cursor: pointer;
 }
 
-#cross:before, #cross:after {
+.form__cross:before, .form__cross:after {
   content: "";
   position: absolute;
   z-index: 1;
   background: black;
 }
 
-#cross:before {
+.form__cross:before {
   top: -5px;
   left: 12px;
   width: 2px;
@@ -1297,7 +1297,7 @@ p + p.info__caption {
   transform: rotate(45deg);
 }
 
-#cross:after {
+.form__cross:after {
   top: -5px;
   left: 12px;
   height: 140%;
@@ -1486,5 +1486,75 @@ p + p.info__caption {
 
 .choose-wrapper {
   width: 100%;
+}
+
+.feedback__form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 758px;
+  padding: 3.125rem 2.4375rem 1.5rem;
+  background-color: white;
+}
+
+.feedback__form__container {
+  max-width: 600px;
+}
+
+.feedback__title {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5625rem;
+}
+
+.feedback__title + p {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.125rem;
+}
+
+.feedback__name-label, .feedback__phone-label {
+  display: inline-block;
+  width: 100%;
+}
+
+.feedback__name-label::after, .feedback__phone-label::after {
+  content: "*";
+  color: red;
+}
+
+.feedback__name, .feedback__phone {
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1.125rem;
+  border: 1px solid #ffa901;
+  border-radius: 1rem;
+}
+
+.feedback__name:focus, .feedback__phone:focus {
+  outline: none;
+}
+
+.feedback__submit {
+  display: block;
+  margin: 0 auto;
+  width: 13.875rem;
+  height: 3.5rem;
+  cursor: pointer;
+  border: 1px solid #ffa901;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+.order__wrapper {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid #ffa901;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
