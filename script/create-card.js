@@ -139,8 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const createModal = (productId) => {
-        const actionForm = document.querySelector('.order__form'); /* Form для указания адреса */
-
         const infoBlock = document.querySelector('.form__info');
         const descriptionBlock = document.querySelector('.form__description');
 
